@@ -42,5 +42,8 @@ public class PlayerMovement : MonoBehaviour
         if(!transform.GetComponent<PlayerHealth>().hasDied){
             rb.velocity = moveDir * speed;
         }
+        else{
+            rb.velocity = Vector2.zero;
+        }
     }
 }

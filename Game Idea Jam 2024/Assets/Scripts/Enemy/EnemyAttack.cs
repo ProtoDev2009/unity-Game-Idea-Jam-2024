@@ -30,7 +30,7 @@ public class EnemyAttack : MonoBehaviour
     }
 
     IEnumerator DamagePlayer(PlayerHealth target){
-        damage = Random.Range(0, 10);
+        damage = Random.Range(0, 4);
 
         target.TakeDamage(damage);
         yield return new WaitForSeconds(1);

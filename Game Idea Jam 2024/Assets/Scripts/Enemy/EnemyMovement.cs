@@ -34,7 +34,6 @@ public class EnemyMovement : MonoBehaviour
         }
         else{
             // EVERY PLAYER HAS DIED
-            ChasePlayer(null);;
         }
     }
 
