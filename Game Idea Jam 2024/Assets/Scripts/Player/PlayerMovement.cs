@@ -1,4 +1,3 @@
-using UnityEditor.Rendering;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
@@ -10,8 +9,8 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField] float speed = 5f;
 
-    float horizontal;
-    float vertical;
+    public float horizontal;
+    public float vertical;
 
     private Vector2 moveDir;
     private Rigidbody2D rb;
@@ -40,6 +39,8 @@ public class PlayerMovement : MonoBehaviour
 
     void FixedUpdate(){
         //MOVEMENT
-        rb.velocity = moveDir * speed;
+        if(!transform.GetComponent<PlayerHealth>().hasDied){
+            rb.velocity = moveDir * speed;
+        }
     }
 }
