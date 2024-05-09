@@ -21,6 +21,8 @@ public class MultiTargetCamera : MonoBehaviour
     }
 
     void Update(){
+        if(targets.Count == 1) return;
+
         if(targets[0].GetComponent<PlayerHealth>().hasDied) targets.Remove(targets[0]);
         else if(targets[1].GetComponent<PlayerHealth>().hasDied) targets.Remove(targets[1]);
     }

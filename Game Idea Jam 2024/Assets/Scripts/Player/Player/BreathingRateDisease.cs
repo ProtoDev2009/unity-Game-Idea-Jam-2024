@@ -29,7 +29,7 @@ public class BreathingRateDisease : MonoBehaviour
                 playerHealth.Die();
             }
         }
-        else if(playerMovement.horizontal != 0 && playerMovement.vertical != 0){
+        else if(playerMovement.horizontal != 0 || playerMovement.vertical != 0){
             if(breathingRate > 0) breathingRate -= 1 * Time.deltaTime;
         }
     }
