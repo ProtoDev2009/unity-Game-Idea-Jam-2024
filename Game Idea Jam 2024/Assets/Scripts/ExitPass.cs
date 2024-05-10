@@ -21,9 +21,20 @@ public class ExitPass : MonoBehaviour
         progressBar.size = currentProgress / 20f;
     }
 
+    void OnTriggerEnter2D(Collider2D collider){
+        if(collider.CompareTag("Player"))GetComponent<AudioSource>().Play();
+    }
+
+    void OnTriggerExit2D(Collider2D collider){
+        if(collider.CompareTag("Player"))GetComponent<AudioSource>().Stop();
+    }
+
     void OnTriggerStay2D(Collider2D collider){
         if(collider.CompareTag("Player") && !playerHealth.hasDied && (playerMovement.horizontal == 0 && playerMovement.vertical == 0)){
-            if(currentProgress < maxProgress) currentProgress += 1 * Time.deltaTime;
+
+            if(currentProgress < maxProgress) {
+                currentProgress += 1 * Time.deltaTime; 
+            }
             else LevelCleared = true;
         }
     }

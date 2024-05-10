@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 3794473196943948900}
   - component: {fileID: 3170170772321367661}
   - component: {fileID: 1781512946194042234}
+  - component: {fileID: -841269051327878742}
   m_Layer: 0
   m_Name: Player2
   m_TagString: Player2
@@ -208,3 +209,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   medicines: 0
+--- !u!114 &-841269051327878742
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8128830185036693784}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a7fee46d6120294abf1b71b6557b3ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  heartRate: 0
+  heartRateBar: {fileID: 0}
